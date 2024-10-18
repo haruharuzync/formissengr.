@@ -7,7 +7,7 @@ let nextClicked = false;
 
 nextBtn.addEventListener("click", () => {
   if (!nextClicked) {
-    question.innerHTML = "incase if you feel tired hingi kalang ng kiss sakin hshaha.";
+    question.innerHTML = "just incase if you feel tired hingi kalang ng kiss sakin hshaha.";
     gif.src = "https://github.com/DzarelDeveloper/Img/blob/main/haisayang.gif?raw=true";
     nextBtn.innerHTML = "reply";
     nextClicked = true;
