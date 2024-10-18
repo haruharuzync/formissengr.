@@ -1,23 +1,17 @@
 const wrapper = document.querySelector(".wrapper");
 const question = document.querySelector(".question");
 const gif = document.querySelector(".gif");
-const yesBtn = document.querySelector(".yes-btn");
-const noBtn = document.querySelector(".no-btn");
+const nextBtn = document.querySelector(".next-btn");
 
-yesBtn.addEventListener("click", () => {
-  question.innerHTML = "Aaaaa, I like you too";
-  gif.src =
-    "https://raw.githubusercontent.com/DzarelDeveloper/Img/main/gif.webp";
-});
+let nextClicked = false;
 
-noBtn.addEventListener("mouseover", () => {
-  const noBtnRect = noBtn.getBoundingClientRect();
-  const maxX = window.innerWidth - noBtnRect.width;
-  const maxY = window.innerHeight - noBtnRect.height;
-
-  const randomX = Math.floor(Math.random() * maxX);
-  const randomY = Math.floor(Math.random() * maxY);
-
-  noBtn.style.left = randomX + "px";
-  noBtn.style.top = randomY + "px";
+nextBtn.addEventListener("click", () => {
+  if (!nextClicked) {
+    question.innerHTML = "incase if you feel tired hingi kalang ng kiss sakin hshaha.";
+    gif.src = "https://github.com/DzarelDeveloper/Img/blob/main/haisayang.gif?raw=true";
+    nextBtn.innerHTML = "reply";
+    nextClicked = true;
+  } else {
+    window.location.href = "https://wa.me/yournumber?text=reply%20message%20whatever";
+  }
 });
